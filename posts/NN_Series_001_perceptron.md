@@ -54,7 +54,7 @@ He goes into a lot of detail to set up the notation he uses to explain the conne
 
     has only two responses, but there is clearly no limit on the number that might be included.
 
-![Figure2](../images/perceptron/Neuron_and_venn_diagram.png)
+![Figure2](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/perceptron/Neuron_and_venn_diagram.png)
 
 This is clearly insightful
 
@@ -80,7 +80,7 @@ Clearly this is not an exact model of how organsims learn but for better or wors
 
 ### Computation Graph of a Perceptron
 
-![Computation Graph of a Perceptron](../images/perceptron/perceptron.png)
+![Computation Graph of a Perceptron](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/perceptron/perceptron.png)
 
 The character 𝚫 (Delta) represents a change or update in the weight w_k. This represents the adjustment made to the weights during the training process.
 
@@ -227,7 +227,7 @@ plt.ylabel('petal length [cm]')
 plt.legend(loc='upper left')
 plt.show()
 ```
-![Data to train the Perceptron](../images/perceptron/output_data.png)
+![Data to train the Perceptron](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/perceptron/output_data.png)
 
 note: this data is clearly linearly separable
 
@@ -249,7 +249,7 @@ plt.ylabel('Number of misclassifications')
 plt.show()
 ```
 
-![Trainin Curve](../images/perceptron/training_curve.png)
+![Trainin Curve](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/perceptron/training_curve.png)
 
 Here we can see that the training converges on a solution after six epochs.
 
@@ -356,7 +356,7 @@ plt.show()
 
 The output is a contour displaying the classification either side of the decision boundary
 
-![Decision Boundary Plot](../images/perceptron/decision_boundary.png)
+![Decision Boundary Plot](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/perceptron/decision_boundary.png)
 
 ## Summary
 
