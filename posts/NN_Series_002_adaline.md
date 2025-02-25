@@ -12,7 +12,7 @@ I have heard three different benefits from this paper, this is in the order I le
 2. The Adaline algorithm illustrates the key concept of **defining and minimising cost functions**. This capability is fundamental for more advanced machine learning algorithms including logistic regression (classification models), support vector machines, and regression models.  
 3. **An Adaptive Pattern Classifier**. I like the old style text so I include a screenshot of a key section here. The concept here is interesting and has me wondering if this is the root of the current wave of “Justism” for saying AI is *just a pattern matcher*. 
 
-![Adaptive Pattern Classifier](../images/adaline/Adaptive_Pattern_Matching.png)  
+![Adaptive Pattern Classifier](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/adaline/Adaptive_Pattern_Matching.png)  
 
 
 ## Side notes on Justism: 
@@ -26,19 +26,19 @@ Justism is a term I have heard via the paper linked in the first bullet point an
 
 The Adaptive Linear Neuron was introduced as a hardware unit and has this schematic. 
 
-![Schematic of Adaline](../images/adaline/adaline_schematic.png)  
+![Schematic of Adaline](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/adaline/adaline_schematic.png)  
 
 And with this there was one-dimensional searching of the solution space.   
 
-![one-dimensional searching of the solution space](../images/adaline/solution_space.png)
+![one-dimensional searching of the solution space](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/adaline/solution_space.png)
 
 The patterns being matched were basic representations of letters  
 
-![Patterns for classification experiment](../images/adaline/patterns.png)
+![Patterns for classification experiment](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/adaline/patterns.png)
 
 With the project tracking the Mean Square Error (MSE) over the number of input patterns  
 
-![Adaptive-element performance curve](../images/adaline/mse_per_pattern.png)
+![Adaptive-element performance curve](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/adaline/mse_per_pattern.png)
 
 ## A quick look back and then forward
 
