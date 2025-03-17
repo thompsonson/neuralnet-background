@@ -1,12 +1,12 @@
-# **Regularisation.**
+# Regularisation: reducing the complexity of a model without compromising accuracy
 
 Regularisation is known to reduce overfitting when training a neural network. As with a lot of these techniques there is a rich background and many options available, so asking the question why and how opens up to a lot of information. Diving through the information, for me at least, it wasn't clear why/how it did this until I reframed what it was doing.
 
 In short, regularisation changes the sensitivity of the model to the training data. In fact, not only can the sensitivity be reduced, you can tune it. Making the model more or less sensitive to features in the training data.This is also known as **Variance**, and can be seen as the amount the model will change if you change the training data.
 
-So, yes it does reduce overfitting; however what it’s really doing is reducing the impact of features in the model. This is an example graph where I got the “aha” moment. The first graph has regularisation turned off and the second has regularisation fully turned on (note that the alpha value is used to calibrate the regularisation and that there are many types). 
+So, yes it does reduce overfitting; however what it’s really doing is reducing the impact of features in the model. This is an example graph where I got the "aha moment". The first graph has regularisation turned off and the second has regularisation fully turned on (note that the alpha value is used to calibrate the regularisation and that there are many types). 
 
-![Comparing Regularisation](../images/regularisation/regularisation.png)
+![Comparing Regularisation](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/regularisation/regularisation.png)
 
 To put what I see into words, on this image there are two models, the first is complex and uses high order polynomials to include the outlining data point. This is not needed and will create erroneous predictions near the outlier (e.g. values like 0.7 or 0.9). By applying regularisation the model is smoothed out as the coefficients of high order polynomials are reduced, pushed towards zero.
 
@@ -44,7 +44,7 @@ AKA how much attention to pay to the regularisation penalty.
 
 Note:
 
-- **If the penalty is too strong:** the model will underestimate the weights and underfat the problem.
+- **If the penalty is too strong:** the model will underestimate the weights and underfit the problem.
 
 - **if the penalty is too weak**: the model will be allowed to overfit the training data.
 
@@ -55,7 +55,7 @@ The value of alpha is between 0 (no penalty) and 1 (full penalty).
 As well as the benefit of a simple less variant model, there are two other benefits that it has:
 
 1. Training on less data than the number of features - allows us to interpolate models by using cross validation on a complementary dataset to direct the choice of regularisation parameters.  
-2. Sparasity - more efficient computationally, with memory, and energy use, it is more interpretable, and aligns to our understanding of biology. 
+2. Sparsity - more efficient computationally, with memory, and energy use, it is more interpretable, and aligns to our understanding of biology. 
 
 ## **Cross validation**
 
@@ -67,7 +67,7 @@ A recognised way to perform cross validation is to monitor the difference betwee
 
 The below image displays a negative training cycle, the diverging results show that the model is incorrectly fitted, in this case overfitting. 
 
-![Tensorflow Playground Output](../images/regularisation/playground_output.png)
+![Tensorflow Playground Output](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/regularisation/playground_output.png)
 
 A graph with no convergence at the start would indicate the model being poorly fitted from the beginning and a change in bias (i.e. regularisation values) should be performed.
 
@@ -109,7 +109,7 @@ print("y_test shape:", y_test.shape)
 
 ### **A cross validation example in a q-learning agent**
 
-In the [https://github.com/thompsonson/q-learning/blob/main/final\_qlearning\_maze\_agent.ipynb](https://github.com/thompsonson/q-learning/blob/main/final_qlearning_maze_agent.ipynb) used when running an experiment
+In the [qlearning_maze_agent](https://github.com/thompsonson/q-learning/blob/main/final_qlearning_maze_agent.ipynb) used when running an experiment
 
 ```python
    def _run_single_experiment(self, config, save_path, experiment_id=None, iteration_count=None):
@@ -146,3 +146,11 @@ In the [https://github.com/thompsonson/q-learning/blob/main/final\_qlearning\_ma
         # Run consistency tests
         test_results = control.test_consistency(num_tests=10)
 ```
+
+## Conclusion
+
+​Regularisation is really powerful. It has practical benefits as well as secondary benefits. From a personal point of view this was really important for me to grasp. It was the feedback I got from my Neural Networks course submission. Interestingly it was a graph that meant the topic clicked and gave me the "aha moment", normally it's code... As such this post is largely therotical without example implementations and comparisons of regularisation. ​In a large part I do not have time. ​I do hope to revisit this and investigate the implementation of each of the types. 
+​
+​The question that I am left with is why would you not always use L2 Regularisation. From what I've read it is possible that it *is* always used. Probable even. 
+​
+​After that, I think a key thing to understand is the Drop Out Regularisation and the similarity to the Mixture of Experts architecture. However this is one for the future after Deep Learning and the Transformers architecture. 
