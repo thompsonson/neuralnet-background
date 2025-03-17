@@ -6,13 +6,13 @@ This is an interesting one as I'd thought it was uite academic. Then I saw these
 
 This graph shows the error per epoch of training a model on the data as is
 
-![training on data as is](../images/feature_normalisation/not_normalised_training.png)
+![training on data as is](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/feature_normalisation/not_normalised_training.png)
 
 We can see that it takes around 180-200 epochs to train with a learning rate (eta) of 0.0002 or lower.
 
 Then I saw this
 
-![training on normalised data](../images/feature_normalisation/normalised_training_eta_0.001.png)
+![training on normalised data](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/feature_normalisation/normalised_training_eta_0.001.png)
 
 Here we see the training takes around 15 epochs with a learning rate of 0.01.
 
@@ -67,7 +67,7 @@ print(f"Feature 2 - Mean: {X_std[:, 1].mean():.2f}, Std: {X_std[:, 1].std():.2f}
 
 The following scatter graphs are produced, showing the data is relatively the same. 
 
-![Comparing data to its normalised version](../images/feature_normalisation/data_comparison.png)
+![Comparing data to its normalised version](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/feature_normalisation/data_comparison.png)
 
 ## Full training comparison
 
@@ -90,7 +90,7 @@ models = run_adaline_analysis(X_std, y, custom_config=normalised_config)
 
 This is the output
 
-![Full training comparison](../images/feature_normalisation/full_training_comparison.png)
+![Full training comparison](https://raw.githubusercontent.com/thompsonson/neuralnet-background/refs/heads/main/images/feature_normalisation/full_training_comparison.png)
 
 ## Conclusion
 
